@@ -56,4 +56,6 @@ export type ProductsQueryType = {
   skip?: number;
   page?: string;
   search?: string;
+  order?: string;
+  sortBy?: string;
 };

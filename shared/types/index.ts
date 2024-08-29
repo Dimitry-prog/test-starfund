@@ -10,3 +10,8 @@ export type ParamsToSetType = {
 }[];
 
 export type ParamsToDeleteType = string[];
+
+export type SortingContentType = {
+  value: string;
+  label: string;
+};

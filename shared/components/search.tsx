@@ -16,7 +16,7 @@ type SearchProps = {
 };
 
 const Search = ({
-  paramsDelete = ['page', 'search', 'q'],
+  paramsDelete = ['page', 'sortBy', 'q'],
   paramsSet = [],
   placeholder = 'Search something',
   className,

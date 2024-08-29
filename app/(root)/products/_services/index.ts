@@ -3,15 +3,17 @@
 import { ProductsQueryType, ProductsResponseType } from '@/app/(root)/products/types';
 import { LIMIT_PER_PAGE } from '@/shared/lib/constants';
 
-export const getAllProducts = async (query?: ProductsQueryType) => {
-  const params = new URLSearchParams();
-  const page = query?.page || '1';
-  const limit = query?.limit || LIMIT_PER_PAGE;
+export const getAllProducts = async (query: ProductsQueryType) => {
+  const { page = '1', limit = LIMIT_PER_PAGE, search = '', sortBy = '', order = '' } = query;
+
   const skip = (Number(page) - 1) * limit;
-  const search = query?.search || '';
-  params.set('limit', limit.toString());
-  params.set('skip', skip.toString());
-  params.set('q', search.toString());
+  const params = new URLSearchParams({
+    limit: limit.toString(),
+    skip: skip.toString(),
+    q: search,
+    sortBy,
+    order,
+  });
 
   const baseUrl = search
     ? 'https://dummyjson.com/products/search'
