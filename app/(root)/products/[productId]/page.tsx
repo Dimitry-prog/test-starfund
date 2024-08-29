@@ -1,10 +1,10 @@
-import { LucideShoppingCart, StarIcon } from 'lucide-react';
+import { StarIcon } from 'lucide-react';
 import Image from 'next/image';
 
+import AddToCart from '@/app/(root)/products/_components/add-to-cart';
 import { getAllProducts } from '@/app/(root)/products/_services';
 import { getProductById } from '@/app/(root)/products/[productId]/_services';
 import { ReviewType } from '@/app/(root)/products/types';
-import { Button } from '@/shared/components/ui/button';
 import { formatDateTime, formatNumber } from '@/shared/lib/formatters';
 
 type SingleProductPageProps = {
@@ -68,9 +68,7 @@ const SingleProductPage = async ({ params: { productId } }: SingleProductPagePro
             <p>Available: {product.availabilityStatus}</p>
           </div>
 
-          <Button size="icon" className="w-full">
-            <LucideShoppingCart className="size-4" />
-          </Button>
+          <AddToCart product={product} cartBtnClassName="w-full" />
         </div>
       </div>
 

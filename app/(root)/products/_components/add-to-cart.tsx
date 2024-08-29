@@ -9,8 +9,9 @@ import { useAppDispatch, useAppSelector } from '@/shared/hooks/redux-hooks';
 
 type AddToCartProps = {
   product: ProductType;
+  cartBtnClassName?: string;
 };
-const AddToCart = ({ product }: AddToCartProps) => {
+const AddToCart = ({ product, cartBtnClassName }: AddToCartProps) => {
   const cartItems = useAppSelector(cartSliceSelectors.getCartItems);
   const dispatch = useAppDispatch();
   const qty = cartItems.find((item) => item.product.id === product.id)?.qty || 0;
@@ -39,7 +40,7 @@ const AddToCart = ({ product }: AddToCartProps) => {
           </Button>
         </div>
       ) : (
-        <Button size="icon" onClick={() => handleToggleToCart('add')}>
+        <Button size="icon" onClick={() => handleToggleToCart('add')} className={cartBtnClassName}>
           <LucideShoppingCart className="size-4" />
         </Button>
       )}
