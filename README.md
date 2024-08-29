@@ -2,7 +2,6 @@
 
 ```bash
 npm run dev  // dev mod
-npm run test  // for tests
 ```
 
 ### Features
@@ -32,6 +31,10 @@ BASE_API_URL=
 
 <details><summary>Images</summary>
 
+![image](https://github.com/user-attachments/assets/73ea56d3-aa54-491b-a03f-7f88542b266d)
+![image](https://github.com/user-attachments/assets/311be49b-e6dd-4113-89bd-1b00366db10a)
+![image](https://github.com/user-attachments/assets/e8d05a5e-3051-4a03-be96-3b8d0994ffad)
+![image](https://github.com/user-attachments/assets/3ba954f5-0158-432a-9e1a-a67bcdb332d5)
 
 </details>
 
