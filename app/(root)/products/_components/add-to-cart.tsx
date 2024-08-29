@@ -1,6 +1,6 @@
 'use client';
 
-import { LucideShoppingCart, MinusIcon, PlusIcon } from 'lucide-react';
+import { LucideShoppingCart, MinusIcon, PlusIcon, XIcon } from 'lucide-react';
 
 import { cartSliceActions, cartSliceSelectors } from '@/app/(root)/products/_slices/cart-slice';
 import { ProductType } from '@/app/(root)/products/types';
@@ -15,8 +15,8 @@ const AddToCart = ({ product }: AddToCartProps) => {
   const dispatch = useAppDispatch();
   const qty = cartItems.find((item) => item.product.id === product.id)?.qty || 0;
 
-  const handleAddToCart = () => {
-    dispatch(cartSliceActions.addProductToCart(product));
+  const handleToggleToCart = (actionType: 'add' | 'remove') => {
+    dispatch(cartSliceActions.toggleProductInCart({ product, actionType }));
   };
 
   const handleRemove = () => {
@@ -27,16 +27,19 @@ const AddToCart = ({ product }: AddToCartProps) => {
     <div>
       {qty > 0 ? (
         <div className="flex items-center gap-2">
-          <Button size="icon" onClick={handleRemove}>
+          <Button size="icon" onClick={() => handleToggleToCart('remove')}>
             <MinusIcon className="size-4" />
           </Button>
           <p className="font-bold">{qty}</p>
-          <Button size="icon" onClick={handleAddToCart}>
+          <Button size="icon" onClick={() => handleToggleToCart('add')}>
             <PlusIcon className="size-4" />
+          </Button>
+          <Button size="icon" variant="destructive" onClick={handleRemove}>
+            <XIcon className="size-4" />
           </Button>
         </div>
       ) : (
-        <Button size="icon" onClick={handleAddToCart}>
+        <Button size="icon" onClick={() => handleToggleToCart('add')}>
           <LucideShoppingCart className="size-4" />
         </Button>
       )}

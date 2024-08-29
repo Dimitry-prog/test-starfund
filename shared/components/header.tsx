@@ -1,12 +1,9 @@
-import { ShoppingCartIcon } from 'lucide-react';
 import Link from 'next/link';
 
+import Cart from '@/app/(root)/products/_components/cart';
 import { Button } from '@/shared/components/ui/button';
-import { cn } from '@/shared/lib/utils';
 
 const Header = () => {
-  const cart = [];
-
   return (
     <header className="sticky top-0 z-50 border border-b bg-background py-4">
       <div className="container flex items-center justify-between">
@@ -29,16 +26,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <Button asChild variant="ghost">
-          <Link href="/cart" className="relative">
-            <ShoppingCartIcon
-              className={cn('size-4', cart.length > 0 && 'fill-red-500 stroke-red-500')}
-            />
-            {cart.length > 0 && (
-              <span className="absolute -top-0.5 right-2.5 z-50">{cart.length}</span>
-            )}
-          </Link>
-        </Button>
+        <Cart />
       </div>
     </header>
   );
