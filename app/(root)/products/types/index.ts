@@ -55,4 +55,5 @@ export type ProductsQueryType = {
   limit?: number;
   skip?: number;
   page?: string;
+  search?: string;
 };
