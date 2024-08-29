@@ -1,7 +1,8 @@
-import { LucideShoppingCart, StarIcon, ViewIcon } from 'lucide-react';
+import { StarIcon, ViewIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import AddToCart from '@/app/(root)/products/_components/add-to-cart';
 import { ProductType } from '@/app/(root)/products/types';
 import { Button } from '@/shared/components/ui/button';
 import {
@@ -45,9 +46,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
               <ViewIcon className="size-4" />
             </Link>
           </Button>
-          <Button size="icon">
-            <LucideShoppingCart className="size-4" />
-          </Button>
+          <AddToCart product={product} />
         </CardFooter>
       </Card>
     </li>
