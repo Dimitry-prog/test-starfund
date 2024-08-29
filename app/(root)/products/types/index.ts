@@ -50,3 +50,9 @@ export type ReviewType = {
   reviewerName: string;
   reviewerEmail: string;
 };
+
+export type ProductsQueryType = {
+  limit?: number;
+  skip?: number;
+  page?: string;
+};

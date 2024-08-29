@@ -29,7 +29,7 @@ export const generateMetadata = async ({ params: { productId } }: SingleProductP
 };
 
 export const generateStaticParams = async () => {
-  const products = await getAllProducts();
+  const products = await getAllProducts({ limit: 0 });
 
   if (products) {
     return products.products.map((product) => ({

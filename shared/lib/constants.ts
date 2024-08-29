@@ -5,3 +5,5 @@ export const CURRENCY_FORMATTER = new Intl.NumberFormat('en-US', {
 });
 
 export const NUMBER_FORMATTER = new Intl.NumberFormat('en-US');
+
+export const LIMIT_PER_PAGE = 10;
