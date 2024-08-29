@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
 
+import Header from '@/shared/components/header';
 import StoreProvider from '@/shared/components/store-provider';
 import { Toaster } from '@/shared/components/ui/sonner';
 import { cn } from '@/shared/lib/utils';
@@ -28,11 +29,12 @@ export default function RootLayout({
       <StoreProvider>
         <body
           className={cn(
-            'container flex min-h-[100dvh] flex-col bg-background font-sans antialiased',
+            'flex min-h-[100dvh] flex-col bg-background font-sans antialiased',
             inter.variable
           )}
         >
-          <main className="flex-1">{children}</main>
+          <Header />
+          <main className="container my-6 flex-1">{children}</main>
           <Toaster position="top-center" />
         </body>
       </StoreProvider>
