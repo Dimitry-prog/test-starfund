@@ -43,7 +43,7 @@ type MetaType = {
   qrCode: string;
 };
 
-type ReviewType = {
+export type ReviewType = {
   rating: number;
   comment: string;
   date: Date;
