@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev  // dev mod
+npm run test  // for tests
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Cart
+* Filtering
+* Sorting
+* Pagination
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Stack
 
-## Learn More
+* Next
+* Typescript
+* Tailwind
+* eslint
+* prettier
 
-To learn more about Next.js, take a look at the following resources:
+### ENV file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<details><summary>env</summary>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+BASE_API_URL=
 
-## Deploy on Vercel
+</details>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Preview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<details><summary>Images</summary>
+
+
+</details>
+
+### Test Assignment for React Front-end Developer
+
+<details><summary>Test Info</summary>
+React (Next.js) E-commerce Product Listing Page with Server Side Rendering
+Objective: The goal of this coding challenge is to create an e-commerce product listing page using Next.js
+and Tailwind CSS. The candidate should demonstrate their ability to work with React components,
+manage state using Redux, interact with an API on the server-side, and implement SEO metadata.
+Requirements:
+1. Use the latest version of Next.js to create a new project. Set up Tailwind CSS for styling.
+2. Fetch product data from the provided JSON API endpoint on the server side (you can use a
+service like My JSON Server or JSONPlaceholder to host your JSON data). Each page should
+contain SEO metadata.
+3. The code should written in Typescript and should be Type saved.
+3. Example data structure:
+
+4. Create a product listing page that displays the fetched product data in a grid layout. Each
+   product card should include:
+   ○ Product image
+   ○ Product name
+   ○ Product description (truncate to 100 characters)
+   ○ Price (formatted with currency)
+   ○ Rating (display using stars or a numerical value)
+
+5. Implement pagination or infinite scroll for the product listing. Limit the initial page to
+   display
+   only 10 products, and load more as the user interacts with the page.
+6. Add a search bar to filter products by title. The search should be case-insensitive and update
+   the product listing in real-time as the user types.
+7. Implement sorting functionality for the products (e.g., by price or rating).
+8. Add the ability to add products to a shopping cart and display the total number of items and the
+   total price in a fixed header.
+9. Set up Redux for state management.
+10. Create a simple responsive design for the product listing page using Tailwind CSS.
+11. Write clean, modular, and maintainable code.
+12. Use Git for version control and provide a link to a GitHub repository with the completed
+    project.
+
+Bonus Points:
+
+1. Write tests for the application using a testing library such as Jest and React Testing Library.
+   Evaluation Criteria:
+
+* Code quality and organization
+* Proper use of React components and state management with Redux
+* Server-side data fetching and handling SEO metadata
+* Responsive design and user experience with Tailwind CSS
+* Bonus features and overall functionality
+  Submission:
+  Submit the GitHub repository link, along with a short description of the implemented features and
+  any
+  known issues.
+
+</details>
