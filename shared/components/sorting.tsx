@@ -40,7 +40,10 @@ const Sorting = ({ className, sortingContent = SORTING_PRODUCTS }: SortingProps)
 
   return (
     <Select onValueChange={(value) => handleChange(value)}>
-      <SelectTrigger className={cn('min-h-[58px] w-[180px] rounded-xl', className)}>
+      <SelectTrigger
+        className={cn('min-h-[58px] w-[180px] rounded-xl', className)}
+        data-testid="select-trigger"
+      >
         <SelectValue placeholder="SortBy" />
       </SelectTrigger>
       <SelectContent>
