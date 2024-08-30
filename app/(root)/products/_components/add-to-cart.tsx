@@ -28,19 +28,37 @@ const AddToCart = ({ product, cartBtnClassName }: AddToCartProps) => {
     <div>
       {qty > 0 ? (
         <div className="flex items-center gap-2">
-          <Button size="icon" onClick={() => handleToggleToCart('remove')}>
+          <Button
+            size="icon"
+            onClick={() => handleToggleToCart('remove')}
+            data-testid="remove-cart-item-btn"
+          >
             <MinusIcon className="size-4" />
           </Button>
           <p className="font-bold">{qty}</p>
-          <Button size="icon" onClick={() => handleToggleToCart('add')}>
+          <Button
+            size="icon"
+            onClick={() => handleToggleToCart('add')}
+            data-testid="add-cart-item-btn"
+          >
             <PlusIcon className="size-4" />
           </Button>
-          <Button size="icon" variant="destructive" onClick={handleRemove}>
+          <Button
+            size="icon"
+            variant="destructive"
+            onClick={handleRemove}
+            data-testid="clear-cart-btn"
+          >
             <XIcon className="size-4" />
           </Button>
         </div>
       ) : (
-        <Button size="icon" onClick={() => handleToggleToCart('add')} className={cartBtnClassName}>
+        <Button
+          size="icon"
+          onClick={() => handleToggleToCart('add')}
+          className={cartBtnClassName}
+          data-testid="shopping-cart-btn"
+        >
           <LucideShoppingCart className="size-4" />
         </Button>
       )}

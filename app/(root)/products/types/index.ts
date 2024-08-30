@@ -25,7 +25,7 @@ export type ProductType = {
   reviews: ReviewType[];
   returnPolicy: string;
   minimumOrderQuantity: number;
-  MetaType: MetaType;
+  meta: MetaType;
   thumbnail: string;
   images: string[];
 };
