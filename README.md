@@ -2,20 +2,25 @@
 
 ```bash
 npm run dev  // dev mod
+npm run test  // for tests
 ```
 
 ### Features
 
-* Cart
+* Products Basket
 * Filtering
 * Sorting
 * Pagination
+* Search
+* Tests
 
 ### Stack
 
 * Next
 * Typescript
 * Tailwind
+* React Testing Library
+* Jest
 * eslint
 * prettier
 
